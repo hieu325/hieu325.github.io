@@ -1,12 +1,15 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image
-img: /assets/img/3.jpg
-importance: 2
-category: work
+title: wave inverse problems
+description: a deep learning framework for solving inverse problems
+img: /assets/img/tomo.png
+#importance: 2
+#category: work
 ---
 
+
+
+<!--
 Every project has a beautiful feature showcase page.
 It's easy to include images in a flexible 3-column grid format.
 Make your photos 1/3, 2/3, or full width.
@@ -76,3 +79,4 @@ Here's the code for the last row of images above:
     </div>
 </div>
 ```
+-->

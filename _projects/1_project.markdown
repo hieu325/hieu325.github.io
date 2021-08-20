@@ -1,12 +1,56 @@
 ---
 layout: page
-title: project 1
-description: a project with a background image
-img: /assets/img/12.jpg
-importance: 1
-category: work
+title: wave propagation
+description: Developing a stable parallel-in-time scheme for the wave equation
+img: /assets/img/wave.png
+#importance: 1
+#category: work
 ---
 
+The central theme of my thesis is the high frequency wave propagation. 
+In many engineering applications, scientists use wave signals to image 
+regions are often much larger than the signal wavelength, which makes the simulation challenging
+due to the numerical stability constraint on spatial and temporal resolution.
+
+Nowaday, large scale simulations are possible because of powerful supercomputers.
+Such development makes parallel-friendly algorithms more favorable in many engineering simulations
+than sequential algorithms. A successful example of the parallel algorithms is the domain decomposition approach.
+This approach involves dividing the space domain into subdomains, each of which is sent to different computers
+to solve. Once dividing into more subdomains does not give further speed-up, 
+the decomposition in the time domain will be the key for concurrency.
+
+Another reason for considering the parallel-in-time approach is the multiscale nature of
+the high-frequency wave propagation in complicated media. At the microscale level,
+we have a direct solver such as the finite difference time domain, which fully resolves
+the wavefield and the medium. The direct solver is computationally expensive. 
+Meanwhile, at the macroscale level, we have a coarser direct solver,
+which efficiently approximates the wavefield solution. Through the parallel-in-time approach,
+we systematically combine the solvers at the microscale and macroscale levels to obtain
+high-fidelity wavefield in shorter wall-clock time.  
+
+we proposed a \emph{data-driven} parareal scheme, or $\theta$-parareal scheme. 
+Concretely, the solution at $n$-th time step after $k$ iterations can be written as
+\begin{equation*}
+    u^{k}_{n} = \theta^{k-1} \mathcal{G} u^{k}_{n-1} + \mathcal{F} u^{k-1}_{n-1} - \theta^{k-1} \mathcal{G} u^{k-1}_{n-1},
+\end{equation*}
+where $\mathcal{G},\mathcal{F}$ denote the coarse and fine solver respectively.
+The key idea is to gather previously computed solutions to construct an interpolator $\theta^{k}$,
+or correction operator, which is used to improve the accuracy of the coarse solver. 
+It is crucial to consider the conservation of \emph{wave energy}.
+we convert the wavefield data into energy components so that the solution of a minimization problem with orthogonality constraint is the correction operator. The minimization problem is in the form of the Procrustes problem, which is solved by the singular value decomposition method. After every iteration, the minimizer is updated by the low-rank QR factorization. For wave propagation in complex 2-D media, the numerical results show that the new scheme is convergent and stable. I carried out the intensive computation at Stampede 2 computing nodes. The main conclusions are the following:
+\begin{itemize}
+\setlength \itemsep{0em}
+    \item The correction operator is stable because of its orthogonality property. Intuitively, it aligns the coarse solution to the fine solution.
+    \item The correction operator is computed and updated efficiently using the low-rank method.
+    \item In the wave energy sense, we proved the convergence and stability of the new scheme. 
+\end{itemize}
+
+One drawback in \cite{NR2019procrustes} is that the correction operator $\theta^k$ is not effective
+when the wavefield scatters at medium interface. We hope by replacing the correction operator with 
+a deep neural network, the resulting $\theta$-parareal scheme is more robust to complicated medium heterogeneity.
+Deep learning has attracted lots of interest from the scientific community because of its successful applications in computer vision and speech recognition.
+
+<!--
 Every project has a beautiful feature showcase page.
 It's easy to include images in a flexible 3-column grid format.
 Make your photos 1/3, 2/3, or full width.
@@ -76,3 +120,4 @@ Here's the code for the last row of images above:
     </div>
 </div>
 ```
+-->
