@@ -7,7 +7,6 @@ img: /assets/img/wave.png
 #category: work
 ---
 
-The central theme of my thesis is the high frequency wave propagation. 
 In many engineering applications, scientists use wave signals to image 
 regions are often much larger than the signal wavelength, which makes the simulation challenging
 due to the numerical stability constraint on spatial and temporal resolution.
@@ -28,27 +27,26 @@ which efficiently approximates the wavefield solution. Through the parallel-in-t
 we systematically combine the solvers at the microscale and macroscale levels to obtain
 high-fidelity wavefield in shorter wall-clock time.  
 
-we proposed a \emph{data-driven} parareal scheme, or $\theta$-parareal scheme. 
-Concretely, the solution at $n$-th time step after $k$ iterations can be written as
-\begin{equation*}
-    u^{k}_{n} = \theta^{k-1} \mathcal{G} u^{k}_{n-1} + \mathcal{F} u^{k-1}_{n-1} - \theta^{k-1} \mathcal{G} u^{k-1}_{n-1},
-\end{equation*}
-where $\mathcal{G},\mathcal{F}$ denote the coarse and fine solver respectively.
-The key idea is to gather previously computed solutions to construct an interpolator $\theta^{k}$,
-or correction operator, which is used to improve the accuracy of the coarse solver. 
-It is crucial to consider the conservation of \emph{wave energy}.
-we convert the wavefield data into energy components so that the solution of a minimization problem with orthogonality constraint is the correction operator. The minimization problem is in the form of the Procrustes problem, which is solved by the singular value decomposition method. After every iteration, the minimizer is updated by the low-rank QR factorization. For wave propagation in complex 2-D media, the numerical results show that the new scheme is convergent and stable. I carried out the intensive computation at Stampede 2 computing nodes. The main conclusions are the following:
-\begin{itemize}
-\setlength \itemsep{0em}
-    \item The correction operator is stable because of its orthogonality property. Intuitively, it aligns the coarse solution to the fine solution.
-    \item The correction operator is computed and updated efficiently using the low-rank method.
-    \item In the wave energy sense, we proved the convergence and stability of the new scheme. 
-\end{itemize}
+we proposed a data-driven parareal scheme. The original parareal scheme for PDE was developed by J. Lions, Y. Maday, G. Turinici. 
+Concretely, the solution at n-th time step after \\(k\\) iterations can be written as
 
-One drawback in \cite{NR2019procrustes} is that the correction operator $\theta^k$ is not effective
-when the wavefield scatters at medium interface. We hope by replacing the correction operator with 
-a deep neural network, the resulting $\theta$-parareal scheme is more robust to complicated medium heterogeneity.
-Deep learning has attracted lots of interest from the scientific community because of its successful applications in computer vision and speech recognition.
+$$u^{k}_{n} = \theta^{k-1} \mathcal{G} u^{k}_{n-1} + 
+\mathcal{F} u^{k-1}_{n-1} - \theta^{k-1} \mathcal{G} u^{k-1}_{n-1}$$
+    
+where \\(\mathcal{G},\mathcal{F}\\) denote the coarse and fine solver respectively.
+The key idea is to gather previously computed solutions to construct an interpolator \\(\theta^{k}\\),
+or correction operator, which is used to improve the accuracy of the coarse solver. 
+It is crucial to consider the conservation of wave energy.
+we convert the wavefield data into energy components so that the solution of a minimization problem
+with orthogonality constraint is the correction operator. 
+The minimization problem is in the form of the Procrustes problem, 
+which is solved by the singular value decomposition method. 
+After every iteration, the minimizer is updated by the low-rank QR factorization. 
+For wave propagation in complex 2-D media, the numerical results show that the new scheme
+is convergent and stable. 
+
+Furthermore, in light of deep learning we train the correction operator in a supervised manner. 
+The resulting \\(\theta\\)-parareal scheme becomes more robust to complicated medium heterogeneity.
 
 <!--
 Every project has a beautiful feature showcase page.

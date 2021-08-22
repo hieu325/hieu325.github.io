@@ -7,7 +7,16 @@ img: /assets/img/tomo.png
 #category: work
 ---
 
+Waves are very useful for exploration sciences. Scientists have been using pressure wave to map the 
+Earth subsurface; acoustic wave to diagnose patients; electromagnetic wave to scan luggages ... 
+The wave inverse problems are usually ill-posed, hence the recovered images are blurry and contain 
+artifacts. 
 
+Beside traditional regularization to make the problem well-posed, deep learning offers
+data-driven approach thanks to its inductive bias.  
+I am currently involved in two projects:
+1. Estimating planet\'s interior from its toroidal modes
+2. Implicit representation of Earth velocity using travel time data
 
 <!--
 Every project has a beautiful feature showcase page.

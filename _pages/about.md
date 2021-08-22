@@ -17,7 +17,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am a computational physicist. Currently I am holding a Postdoc position in the Center for Data Analytics lab, headed by Prof. Dr. Ivan Dokmanic'. 
+I am a computational physicist. Currently I am holding a Postdoc position in the Center for Data Analytics lab, headed by Prof. Dr. Ivan Dokmanic. 
 
 I received a Ph.D. at the Oden Institute, University of Texas at Austin in 2020. My Ph.D. adviser is Prof. Richard Tsai. 
 The doctoral thesis is developing parallel-in-time methods to simulate high-frequency wave propagation. 
