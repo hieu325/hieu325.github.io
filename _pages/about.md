@@ -7,23 +7,22 @@ description: <a href="https://dmi.unibas.ch/en/"> University of Basel</a>
 profile:
   align: right
   image: my_pic.jpg
-  address: >
-    <p>Department of Mathematics and Computer Science</p>
-    <p>Spiegelgasse 5</p>
-    <p>Basel, Switzerland 4051</p>
+  [//]address: Eindhoven, the Netherlands
 
 news: false  # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am a computational scientist. Currently I am holding a Postdoc position in the Center for Data Analytics lab, headed by Prof. Dr. Ivan Dokmanic. 
+I am an HPC Applications engineer at ASML Netherlands. 
+
+My previous position was at University of Basel, where the research focused on scientific machine learning applications to wave-based inverse problems.
 
 I received a Ph.D. at the Oden Institute, University of Texas at Austin in 2020. My Ph.D. adviser is <a href="https://tsairesearch.github.io/">  Prof. Richard Tsai </a>. 
 The doctoral thesis is developing parallel-in-time methods to simulate high-frequency wave propagation. 
 I received a Bachelor in Physics at the University of Minnesota, Twin-Cities. 
 
-My research interests include numerical wave propagation, multiscale modeling, deep learning, numerical analysis and linear algebra. 
+My research interests include numerical wave propagation, deep learning and scientific computing. 
 
 [//]: #My research has been supported by the Vietnam Education Foundation Fellowship, the National Initiative for Modeling and Simulation Fellowship, 
 
