@@ -1,12 +1,11 @@
----
-layout: page
-title: wave propagation
-description: Developing a stable parallel-in-time scheme for the wave equation
-img: /assets/img/wave.png
+#---
+#layout: page
+#title: wave propagation
+#description: Developing a stable parallel-in-time scheme for the wave equation
+#img: /assets/img/wave.png
 #importance: 1
 #category: work
-
----
+#---
 
 In many engineering applications, scientists use wave signals to image 
 regions are often much larger than the signal wavelength, which makes the simulation challenging
