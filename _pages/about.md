@@ -3,7 +3,7 @@ layout: about
 title: about
 permalink: /
 
-subtitle: <a href='#'>ASML</a>
+subtitle: <a href='#'>Computational scientist</a>
 
 profile:
   align: right
