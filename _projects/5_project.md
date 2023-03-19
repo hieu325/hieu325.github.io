@@ -1,4 +1,3 @@
-<<<<<<<< HEAD:trash/5_project.markdown
 #---
 #layout: page
 #title: project 5
@@ -7,16 +6,7 @@
 #importance: 3
 #category: fun
 #---
-========
----
-layout: page
-title: project 5
-description: a project with a background image
-img: assets/img/1.jpg
-importance: 3
-category: fun
----
->>>>>>>> upstream/master:_projects/5_project.md
+
 
 Every project has a beautiful feature showcase page.
 It's easy to include images in a flexible 3-column grid format.
