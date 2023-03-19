@@ -2,20 +2,24 @@
 layout: about
 title: about
 permalink: /
-description: <a href="https://dmi.unibas.ch/en/"> University of Basel</a>
+
+subtitle: <a href='#'>ASML</a>
 
 profile:
   align: right
   image: my_pic.jpg
-  [//]address: Eindhoven, the Netherlands
+  image_circular: false # crops the image to make it circular
+  address: >
+    <p>Eindhoven, the Netherlands</p>
+
 
 news: false  # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am an HPC Applications engineer at ASML Netherlands. 
 
+I am an HPC Applications engineer at ASML Netherlands. 
 My previous position was at University of Basel, where the research focused on scientific machine learning applications to wave-based inverse problems.
 
 I received a Ph.D. at the Oden Institute, University of Texas at Austin in 2020. My Ph.D. adviser is <a href="https://tsairesearch.github.io/">  Prof. Richard Tsai </a>. 
@@ -31,3 +35,4 @@ My research interests include numerical wave propagation, deep learning and scie
 [//]: #Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
 
 [//]: #Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/){:target="\_blank"} and [Academicons](https://jpswalsh.github.io/academicons/){:target="\_blank"}, like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+
