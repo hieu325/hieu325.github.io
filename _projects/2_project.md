@@ -1,11 +1,11 @@
-#---
-#layout: page
-#title: wave inverse problems
-#description: a deep learning framework for solving inverse problems
-#img: /assets/img/tomo.png
-#importance: 2
-#category: work
-#---
+---
+layout: page
+title: wave inverse problems
+description: a deep learning framework for solving inverse problems
+img: /assets/img/tomo.png
+importance: 2
+category: work
+---
 
 Waves are very useful for exploration sciences. Scientists have been using pressure wave to map the 
 Earth subsurface; acoustic wave to diagnose patients; electromagnetic wave to scan luggages ... 
